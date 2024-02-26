@@ -69,7 +69,7 @@ export default function Loader() {
           }}
           type='text'
           placeholder='email'
-          className='border border-gray-200 w-[40vw] md:w-[300px] px-2 py-1 outline-none rounded-sm'
+          className='border text-black border-gray-200 w-[40vw] md:w-[300px] px-2 py-1 outline-none rounded-sm'
         />
         <input
           onChange={(e) => {
@@ -77,7 +77,7 @@ export default function Loader() {
           }}
           type='text'
           placeholder='Password'
-          className='border border-gray-200 w-[40vw] md:w-[300px] px-2 py-1 outline-none rounded-sm'
+          className='border text-black border-gray-200 w-[40vw] md:w-[300px] px-2 py-1 outline-none rounded-sm'
         />
 
         <button
