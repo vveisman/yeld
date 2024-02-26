@@ -12,7 +12,7 @@ export default async function Home({
 }) {
   const user = await getUser(searchParams.email);
   return (
-    <main className='flex min-h-screen relative  flex-col items-start justify-start p-10'>
+    <main className='flex min-h-screen relative text-black  flex-col items-start justify-start p-10'>
       <h4 className='text-xl font-bold self-start'>My Profile</h4>
       <section className='mt-10 flex flex-col h-[60vh] justify-around'>
         <div className='flex items-center space-x-5'>

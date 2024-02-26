@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { Inter, Open_Sans, Abhaya_Libre } from "next/font/google";
 import { useAppSelector } from "@/redux/hooks";
 
@@ -13,7 +13,8 @@ const inter = Abhaya_Libre({
 
 const Navbar = () => {
   const router = usePathname();
-  const { email } = useAppSelector((state) => state.Asset);
+  // const { email } = useAppSelector((state) => state.Asset);
+  const email = useSearchParams().get("email");
 
   // Check if the user is not on the localhost:3000 route
   const isProfileVisible = router != "/";

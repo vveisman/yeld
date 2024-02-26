@@ -20,6 +20,8 @@ const SelectComponent = ({
 }) => {
   const [open, setOpen] = useState(false);
   const dispatch = useAppDispatch();
+  console.log(value);
+
   return (
     <OutsideClickHandler
       onOutsideClick={() => {

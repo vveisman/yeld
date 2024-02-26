@@ -22,8 +22,9 @@ const InputLine = ({
   //------------------------------------------------------------------USE EFFECTS
   return (
     <input
-      defaultValue={value}
-      onChange={onChange}
+      value={value}
+      readOnly
+      // onChange={onChange}
       type={type}
       onKeyDown={onKeyDown}
       placeholder={placeholder}
