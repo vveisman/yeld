@@ -1,9 +1,14 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 
 const Claim = () => {
-  const [countdown, setCountdown] = useState("72:00:00"); // Initial countdown time
+  // Check if countdown time is stored in localStorage
+  const initialCountdown =
+    (typeof window != "undefined" && localStorage.getItem("countdown")) ??
+    "72:00:00";
+  const [countdown, setCountdown] = useState<string>(
+    initialCountdown as string
+  );
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -27,10 +32,15 @@ const Claim = () => {
           "0"
         )}:${String(newSeconds).padStart(2, "0")}`
       );
+
+      // Store updated countdown time in localStorage
+      typeof window != "undefined" &&
+        localStorage.setItem("countdown", countdown);
     }, 1000); // Update every second
 
     return () => clearInterval(timer); // Cleanup function to clear interval on unmount
   }, [countdown]);
+
   return (
     <div className='flex items-center space-x-6 mt-10'>
       <button

@@ -11,7 +11,10 @@ async function create(request: Request) {
 
     const existingUser = await db
       .collection("Users")
-      .findOne({ name: body?.name, password: body?.password });
+      .findOne({ email: body?.email, password: body?.password });
+
+    console.log("user", existingUser);
+
     if (existingUser) {
       return Response.json(
         { message: "Login Successfull!!📜" },

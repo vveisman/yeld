@@ -1,5 +1,7 @@
 "use client";
 import { baseUrl } from "@/config";
+import { setEmail } from "@/redux/features/assetSlice";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,9 +16,10 @@ const override: CSSProperties = {
 
 export default function Loader() {
   const router = useRouter();
-  const [id, setId] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const dispatch = useAppDispatch();
+  const { email } = useAppSelector((state) => state.Asset);
 
   // useEffect(() => {
   //   setTimeout(() => {
@@ -29,14 +32,14 @@ export default function Loader() {
 
     try {
       const res = await axios.post(`${baseUrl}/api/login`, {
-        name: id,
+        email: email,
         password: password,
       });
 
       console.log(res?.data);
       alert(res?.data.message);
       setIsLoading(false);
-      router.push("/home");
+      router.push(`/home?email=${email}`);
     } catch (error: any) {
       console.log(error.response.data);
       alert(error.response.data.message);
@@ -62,7 +65,7 @@ export default function Loader() {
       <div className='mt-[5vh] space-y-10 flex flex-col'>
         <input
           onChange={(e) => {
-            setId(e.target.value);
+            dispatch(setEmail(e.target.value));
           }}
           type='text'
           placeholder='email'

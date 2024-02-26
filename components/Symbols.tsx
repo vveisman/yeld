@@ -35,6 +35,40 @@ const Symbols = ({
           />
         ) : logo == "MATIC" ? (
           <Image width={40} height={40} src={"/matic.webp"} alt='btc' />
+        ) : logo == "XRP" ? (
+          <Image width={40} height={40} src={"/xrp.webp"} alt='btc' />
+        ) : logo == "BNB" ? (
+          <Image
+            width={40}
+            height={40}
+            className='rounded-full'
+            src={"/bnb.svg"}
+            alt='btc'
+          />
+        ) : logo == "SOL" ? (
+          <Image
+            width={40}
+            height={40}
+            className='rounded-full'
+            src={"/solana.webp"}
+            alt='btc'
+          />
+        ) : logo == "DOGE" ? (
+          <Image
+            width={40}
+            height={40}
+            className='rounded-full'
+            src={"/doge.svg"}
+            alt='btc'
+          />
+        ) : logo == "AVAX" ? (
+          <Image
+            width={40}
+            height={40}
+            className='rounded-full'
+            src={"/avax.webp"}
+            alt='btc'
+          />
         ) : logo == "XAU" ? (
           <Image
             width={40}

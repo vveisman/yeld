@@ -27,8 +27,8 @@ const Invest = () => {
           <p className='text-xl'>{`$${amount * 20}`}</p>
         </div>
       </div>
-      <p className='my-5'>{`Pay $${amount} in usdt to the address below and your account will be credited in a few minutes. Make sure to use the BEP 20 Network`}</p>
-      <p>1982juhss9a8y02929waiaha9a8</p>
+      {/* <p className='my-5'>{`Pay $${amount} in usdt to the address below and your account will be credited in a few minutes. Make sure to use the BEP 20 Network`}</p>
+      <p>1982juhss9a8y02929waiaha9a8</p> */}
     </div>
   );
 };

@@ -18,7 +18,7 @@ const Footer = () => {
         </div>
       </div>
       <div className='text-center text-white  w-max text-[16px]'>
-        Copyright © 2023 .
+        Copyright © 2024.
       </div>
     </div>
   );

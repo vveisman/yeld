@@ -40,3 +40,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+export const revalidate = 120; // revalidate at most every 2 mins

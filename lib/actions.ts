@@ -1,4 +1,6 @@
 "use server";
+import { baseUrl } from "@/config";
+import axios from "axios";
 import nodemailer from "nodemailer"
 
 
@@ -9,12 +11,12 @@ export const fetchPrice = async () => {
       'X-RapidAPI-Key': '58fc9fd74dmsh1504f4f7cbba02dp135d7djsn0d51e3009846',
       'X-RapidAPI-Host': 'twelve-data1.p.rapidapi.com'
     },
-    next:{revalidate:60}
+    next:{revalidate:120}
     
   };
 
   const params = new URLSearchParams({
-    symbol: 'XAU/USD,XAG/USD,BTC/USD,ETH/USD,MATIC/USD,',
+    symbol: 'XAU/USD,XAG/USD,BTC/USD,ETH/USD,MATIC/USD,XRP/USD,BNB/USD,SOL/USD',
     format: 'json',
     outputsize: '30'
   });
@@ -72,3 +74,13 @@ try {
 }
 }
 
+export const getUser = async (email: string) => {
+  try {
+    const res = await axios.post(`${baseUrl}/api/user`, {
+      email,
+    });
+    return res.data;
+  } catch (error) {
+    console.log("error", error);
+  }
+};
