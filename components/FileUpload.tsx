@@ -63,7 +63,7 @@ const FileUpload = () => {
         <p>
           <strong className='semiBold text-dark_blue text-[18px] md:text-[24px]'>
             Upload either your International Passport, National Id card or
-            Driver's license to verify
+            Driver&apos;s license to verify
           </strong>
         </p>
       </div>
