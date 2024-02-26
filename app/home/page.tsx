@@ -19,7 +19,7 @@ const Page = async ({
   const data = await fetchPrice();
 
   return (
-    <div className='relative overflow-hidden p-5 lg:pl-[70px] h-max  pb-20 bg-[#FEFAE0]'>
+    <div className='relative overflow-hidden text-black p-5 lg:pl-[70px] h-max  pb-20 bg-[#FEFAE0]'>
       <section className='flex mb-10 flex-col-reverse lg:h-[50%] lg:grid lg:grid-cols-2'>
         <div className='lg:pt-[20px] relative h-max pb-3 flex flex-col justify-start  items-start'>
           <h4 className='text-[32px] mb-4'>My Assets</h4>
