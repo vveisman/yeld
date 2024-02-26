@@ -17,16 +17,16 @@ export default async function Home({
       <section className='mt-10 flex flex-col h-[60vh] justify-around'>
         <div className='flex items-center space-x-5'>
           <label htmlFor='name'>Name:</label>
-          <p className='text-3xl'>{user.name}</p>
+          <p className='texxt-xl lg:text-3xl'>{user.name}</p>
         </div>
         <div className='flex items-center space-x-5'>
           <label htmlFor='email'>Email:</label>
-          <p className='text-3xl'>{user.email}</p>
+          <p className='texxt-xl lg:text-3xl'>{user.email}</p>
         </div>
         <div className='flex items-center space-x-5'>
           <label htmlFor='address'>Status:</label>
 
-          <p className='text-3xl'>Not Verified</p>
+          <p className='texxt-xl lg:text-3xl'>Not Verified</p>
         </div>
 
         <div className='flex flex-col space-y-5 justify-center items-center'>
