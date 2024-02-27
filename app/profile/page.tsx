@@ -48,7 +48,7 @@ export default async function Home({
             </Link>
           </div>
         )}
-        <Link href={"/change"} className='self-center'>
+        <Link href={`/change?email=${user.email}`} className='self-center'>
           <p className='text-[#33323eff] text-xs self-center underline'>
             Change Password?
           </p>
