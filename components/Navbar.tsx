@@ -29,6 +29,15 @@ const Navbar = () => {
           Yeld
         </h4>
       </Link>
+    <div className = "flex flex-row  items-center">
+        <Link href={`/`} className='mr-5 '>
+          <li
+            style={inter.style}
+            className='text-white hover:text-orange-600 duration-100 list-none  lg:text-xl'
+          >
+            Logout
+          </li>
+        </Link>
       {isProfileVisible && ( // Conditionally render the profile link
         <Link href={`/profile?email=${email}`} className='mr-5 '>
           <li
@@ -39,6 +48,7 @@ const Navbar = () => {
           </li>
         </Link>
       )}
+    </div>
     </div>
   );
 };
